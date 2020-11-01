@@ -29,6 +29,14 @@ def render_game(request):
 
 def timekunal(request):
     feature_part = request.GET.get('featurePart')
+    sheet1.write(1,0,feature_part)
+    f=open('untitled1.txt','a+')
+    f.write(feature_part)
+    #ls.append(feature_part)
+    #ls=[feature_part]
+    
+    #df=pd.DataFrame([feature_part])
+    #df.to_excel("output2.xlsx")
     print(feature_part)
     return JsonResponse("kunal", safe=False)
 
